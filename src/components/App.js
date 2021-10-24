@@ -1,10 +1,10 @@
 import '../styles/App.scss'
-import { firebaseInit } from '../firebase'
+// import { firebaseInit } from '../firebase'
 import { Header } from './Header'
 import { Switch, Route } from 'react-router-dom'
 
 export const App = () => {
-    firebaseInit()
+    // firebaseInit()
 
     return (
         <div className='App'>
