@@ -1,1 +1,12 @@
+@import './theme.scss';
 
+.content {
+    padding-top: 3rem;
+}
+
+.heroEnabled {
+    .content {
+        padding-top: 256px;
+        transition: padding $transition-timing;
+    }
+}

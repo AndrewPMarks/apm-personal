@@ -78,8 +78,10 @@ header {
             display: inline-block;
         }
     }
+}
 
-    &.heroEnabled {
+.heroEnabled {
+    header {
         height: 256px;
 
         .hero {
