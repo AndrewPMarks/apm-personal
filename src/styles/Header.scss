@@ -1,0 +1,103 @@
+@import './theme.scss';
+
+header {
+    height: 3rem;
+    background: $color-primary-light;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: height $transition-timing;
+    box-shadow: $box-shadow-dark;
+
+    .hero {
+        color: $text-primary;
+        background: $color-primary-light;
+        overflow-y: hidden;
+        height: 0;
+        transition: height $transition-timing;
+        padding: 0 1rem;
+
+        > .content {
+            height: calc(256px - 3rem);
+            display: flex;
+            align-items: center;
+            transition: opacity $transition-timing;
+            opacity: 0;
+
+            .title {
+                font-size: xx-large;
+
+                .sub {
+                    font-size: x-large;
+                }
+            }
+        }
+    }
+
+    nav {
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        background: $color-primary;
+        transition: padding $transition-timing;
+
+        .title {
+            color: $text-primary;
+            display: inline-block;
+            font-size: larger;
+            transition: all $transition-timing;
+            max-width: 125px;
+            padding-left: 1rem;
+            overflow-x: hidden;
+            opacity: 1;
+
+            > a {
+                width: 125px;
+            }
+        }
+
+        .links {
+            display: flex;
+            height: 100%;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: 0.8rem;
+
+                &.active {
+                    background: $color-primary-light;
+                }
+            }
+        }
+
+        a {
+            color: $text-primary;
+            text-decoration: none;
+            display: inline-block;
+        }
+    }
+
+    &.heroEnabled {
+        height: 256px;
+
+        .hero {
+            height: calc(256px - 3rem);
+
+            .content {
+                opacity: 1;
+            }
+        }
+
+        nav {
+            padding-left: 1rem;
+
+            .title {
+                max-width: 0;
+                padding-left: 0;
+                opacity: 0;
+            }
+        }
+    }
+}
