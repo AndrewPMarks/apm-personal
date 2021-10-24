@@ -1,11 +1,11 @@
 @import './theme.scss';
 
-.content {
+#root > div > .content {
     padding-top: 3rem;
 }
 
-.heroEnabled {
-    .content {
+#root > .heroEnabled {
+    > .content {
         padding-top: 256px;
         transition: padding $transition-timing;
     }
